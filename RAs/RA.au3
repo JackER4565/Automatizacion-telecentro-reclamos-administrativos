@@ -2,12 +2,12 @@
 #include <GUIConstantsEx.au3>
 #include <GUIListView.au3>
 #include <WindowsConstants.au3>
-#include <D:\bkaup win 10\trabajo\UDF\wd_core.au3>
-#include <D:\bkaup win 10\trabajo\UDF\wd_helper.au3>
+#include <D:\UDF\wd_core.au3> ;https://github.com/Danp2/au3WebDriver TY Danp2
+#include <D:\UDF\wd_helper.au3> ;https://github.com/Danp2/au3WebDriver TY Danp2
 #include <Crypt.au3>
 #include <array.au3>
 #include <Date.au3>
-#include <_INetSmtpMailCom.au3>
+#include <_INetSmtpMailCom.au3> ;included - https://github.com/groubis/typebtomail/blob/master/_INetSmtpMailCom.au3 TY Jos
 
 
 Local $sDesiredCapabilities, $sSession,$inpt_clnt, $sElement, $sButton,$sValue, $sUser, $sPass, $chrome_handle, $hndl
@@ -42,7 +42,7 @@ EndIf
 
 If IniRead(@ScriptDir & "\config.ini", "config", "NoeslaPasswordCRM", "0") == 0 Then
 	Do
-		$Pass = InputBox("Password", "Aca es donde deberias poner la contraseña de CRM.", "", "?", "", "135")
+		$Pass = InputBox("Password", "Aca es donde deberias poner la contraseÃ±a de CRM.", "", "?", "", "135")
 	Until Not @error
 			Local $dEncrypted = StringEncrypt(True, $Pass, 'securepassword')
 			IniWrite(@ScriptDir & "\config.ini", "config", "NoeslaPasswordCRM", $dEncrypted)
@@ -68,7 +68,7 @@ _GUICtrlListView_JustifyColumn(GUICtrlGetHandle($listado), 1, 2)
 
 $boton_go = GUICtrlCreateButton("G0", 8, 160, 90, 25)
 $boton_clean = GUICtrlCreateButton("Limpiar", 100, 160, 90, 25)
-$boton_pass = GUICtrlCreateButton("Cambiar Contraseña", 192, 160, 141, 25)
+$boton_pass = GUICtrlCreateButton("Cambiar ContraseÃ±a", 192, 160, 141, 25)
 
 GUISetState(@SW_SHOW)
 #EndRegion ### END Koda GUI section ###
@@ -89,7 +89,7 @@ While 1
 			Until Not @error
 				IniWrite(@ScriptDir & "\config.ini", "config", "UsernameCRM", $user)
 			Do
-				$Pass = InputBox("Password", "Aca es donde deberias poner la contraseña de CRM.", "", "?", "", "135")
+				$Pass = InputBox("Password", "Aca es donde deberias poner la contraseÃ±a de CRM.", "", "?", "", "135")
 			Until Not @error
 				Local $dEncrypted = StringEncrypt(True, $Pass, 'securepassword')
 				IniWrite(@ScriptDir & "\config.ini", "config", "NoeslaPasswordCRM", $dEncrypted)
@@ -140,7 +140,7 @@ Func GOOO()
 			_WD_LoadWait($sSession, 200)
 
 ;~
-			; Navega a m5
+			; Navega a crm
 
 			_WD_Navigate($sSession, "http://crm.telecentro.local//Cliente/ReclamoAdministrativo/ReclamoCierre.aspx?SubMenu=475")
 			_WD_LoadWait($sSession, 200)
