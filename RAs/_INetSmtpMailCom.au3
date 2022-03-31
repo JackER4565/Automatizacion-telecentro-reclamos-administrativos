@@ -8,17 +8,17 @@
 ;##################################
 $SmtpServer = "smtp.telecentro.net.ar"              ; address for the smtp-server to use - REQUIRED
 $FromName = "RAs"                      ; name from who the email was sent
-$FromAddress = "frondinella@telecentro.net.ar" ; address from where the mail should come
-$ToAddress = "frondinella@telecentro.net.ar ; minsausti@telecentro.net.ar ; jpmorales@telecentro.net.ar ; gcozzi@telecentro.net.ar "   ; destination address of the email - REQUIRED
-;~ $s_CcAddress = "minsausti@telecentro.net.ar"
+$FromAddress = "x@dom.dom" ; address from where the mail should come
+$ToAddress = "x@dom.dom ; x2@dom.dom ; x3@dom.dom ; x4@dom.dom "   ; destination address of the email - REQUIRED
+;~ $s_CcAddress = "x@dom.dom"
 $Subject = "RA nuevo"                   ; subject from the email - can be anything you want it to be
 ;~ $Body = " hola "& @crlf & "adios"                              ; the messagebody from the mail - can be left blank but then you get a blank mail
 $AttachFiles = ""                       ; the file(s) you want to attach seperated with a ; (Semicolon) - leave blank if not needed
 $CcAddress = ""       ; address for cc - leave blank if not needed
 $BccAddress = ""     ; address for bcc - leave blank if not needed
 $Importance = "Normal"                  ; Send message priority: "High", "Normal", "Low"
-$Username = "frondinella@telecentro.net.ar"                    ; username for the account used from where the mail gets sent - REQUIRED
-;~ $Password = "Aq12wsxz*"                  ; password for the account used from where the mail gets sent - REQUIRED
+$Username = "x@dom.dom"                    ; username for the account used from where the mail gets sent - REQUIRED
+;~ $Password = "PASSWORD"                  ; password for the account used from where the mail gets sent - REQUIRED
 $IPPort=465                          ; GMAIL port used for sending the mail
 $ssl=1                               ; GMAILenables/disables secure socket layer sending - put to 1 if using httpS
 
