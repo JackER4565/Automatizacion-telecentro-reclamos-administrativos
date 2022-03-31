@@ -1,10 +1,10 @@
 #include <Inet.au3>
 #include <MsgBoxConstants.au3>
 
-Local $s_SmtpServer = "smtp.telecentro.net.ar"
+Local $s_SmtpServer = "" ;Servidor SMTP
 Local $s_FromName = "My Name"
-Local $s_FromAddress = "frondinella@telecentro.net.ar"
-Local $s_ToAddress = "frondinella@telecentro.net.ar"
+Local $s_FromAddress = "" ; Mail
+Local $s_ToAddress = "" ; Mail
 Local $s_Subject = "My Test UDF"
 Local $as_Body[2]
 $as_Body[0] = "Testing the new email udf"
